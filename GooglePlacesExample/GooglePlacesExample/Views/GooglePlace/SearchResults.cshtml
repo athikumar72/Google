@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "SearchResults";
+    int spacer = 0;
+}
+
+<h2>SearchResults</h2>
+
+<p>
+    Resturants in the area of
+    lat: @ViewBag.Latitude and
+    long: @ViewBag.Longitude
+</p>
+<p>There are @ViewBag.Results.Count match(es)</p>
+@foreach (var grecord in ViewBag.Results)
+{
+    spacer++;
+        
+     if (spacer % 2 == 0)
+     {   <div></div>
+     }
+
+
+    <span>
+        <span>
+            <img src="@grecord.icon" />
+
+            @grecord.name
+            @if (grecord.rating != null)
+            {
+                <span>
+                    rating @grecord.rating
+                </span>
+            }
+        </span>
+
+    </span>
+}

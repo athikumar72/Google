@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "search";
+}
+
+<h2>search for Google Places</h2>
+@using (Html.BeginForm())
+{ 
+<div>
+    a label latitude<input type="text" name="latitude" />
+</div>
+<div>
+    a label longitude<input type="text" name="longitude" />
+</div>
+<div>
+    a label radius <input type = "text" name = "radius" />
+    </div>
+    <div>
+        a label type<input type = "text" name = "type" />
+    </div>
+    <div>
+        a label name <input type = "text" name = "name" />
+    </div>
+
+     
+     <Input type = "submit" value = "search" />
+}
